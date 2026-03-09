@@ -188,7 +188,7 @@ export default function PathSagePage() {
   const [endedDuration, setEndedDuration] = useState('');
 
   const messagesRef = useRef<Message[]>([]);
-  const recognitionRef = useRef<InstanceType<typeof window.SpeechRecognition> | null>(null);
+  const recognitionRef = useRef<any>(null);
   const ringtoneRef = useRef<{ stop: () => void } | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const silenceTimerRef = useRef<NodeJS.Timeout | null>(null);
