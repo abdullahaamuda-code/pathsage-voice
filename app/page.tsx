@@ -364,7 +364,7 @@ export default function PathSagePage() {
       }
     };
 
-    recognition.onresult = (event: SpeechRecognitionEvent) => {
+    recognition.onresult = (event: any) => {
       if (callStateRef.current === 'ended') return;
 
       clearTimeout(silenceTimerRef.current!);
@@ -410,7 +410,7 @@ export default function PathSagePage() {
       }
     };
 
-    recognition.onerror = (event: SpeechRecognitionErrorEvent) => {
+    recognition.onerror = (event: any) => {
       console.error('SpeechRecognition error:', event.error);
       if (event.error === 'not-allowed') {
         setMicError('Microphone access was denied. Please allow mic access and try again.');
