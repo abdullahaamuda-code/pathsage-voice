@@ -20,7 +20,7 @@ interface Message {
 
 // ─── Browser compatibility check ────────────────────────────────────────────
 
-function getSpeechRecognition(): typeof window.SpeechRecognition | null {
+function getSpeechRecognition(): any {
   if (typeof window === 'undefined') return null;
   return (
     (window as any).SpeechRecognition ||
